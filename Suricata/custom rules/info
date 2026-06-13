@@ -1,1 +1,20 @@
+# Custom Suricata Detection Rules
 
+This folder contains custom Suricata signatures developed during my SOC laboratory project.
+
+## Rules Included
+
+### HTTP Admin URI Detection
+Detects HTTP requests containing the keyword "admin" within the URI.
+
+### Suspicious ICMP Payload Detection
+Detects ICMP packets containing a predefined hexadecimal payload pattern.
+
+### SQL Injection Detection
+Uses PCRE to identify common SQL injection characters and payloads within HTTP POST requests.
+
+### ICMP Flood Detection
+Triggers an alert when five ICMP packets are received from the same source within ten seconds.
+
+### ICMP Rate Limiting
+Demonstrates threshold-based alert suppression by limiting alerts to one every ten seconds per source.
